@@ -11,9 +11,9 @@ RUN ["python3","/replacer.py", "/main.template.go"]
 
 
 FROM golang:1.17
-WORKDIR /app
-COPY --from=0 /payloads/* /app/
-COPY go.mod /app
-COPY build.sh /app/build.sh
+ENV GOPATH=/app
+WORKDIR /go/src/app
+COPY --from=0 /payloads/* /go/src/app/
+COPY build.sh /go/src/app/build.sh
 
 RUN "./build.sh"
