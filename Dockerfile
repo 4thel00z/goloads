@@ -1,6 +1,6 @@
 FROM alpine/git
 COPY entrypoint-git.sh /entrypoint-git.sh
-
+RUN /entrypoint-git.sh
 FROM metasploitframework/metasploit-framework
 COPY --from=0 /repo /payloads
 ENV TARGETS="/payloads/*"
