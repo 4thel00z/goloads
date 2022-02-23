@@ -1,0 +1,3 @@
+#! /usr/bin/env bash
+
+go install mvdan.cc/garble@latest && garble build /app/...
