@@ -2,6 +2,13 @@ name: 'goloads'
 icon: 'alert-triangle'
 description: 'Create go executables that contain obfuscated msfvenom payloads'
 color: 'gray-dark'
+inputs:
+  repo-url:
+    description: 'Url of repository that cointains your payl04ds'
+    required: true
+    default: ${{ github.repositoryUrl }}
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - ${{ inputs.repo-url }}
