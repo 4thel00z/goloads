@@ -1,4 +1,4 @@
-#! /usr/bin/env sh
+#!/bin/sh -l
 
 echo "::debug::entrypoint-git.sh"
 echo "::debug::Args are $@"
