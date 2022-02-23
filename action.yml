@@ -1,0 +1,5 @@
+name: 'goloads'
+description: 'Create go executables that contain obfuscated msfvenom payloads'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
